@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Pantalla de carga (ocultar cuando no esté en uso) -->
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/loadingScreen"
+            layout="@layout/loading_screen" />
+    </LinearLayout>
+
+    <!-- Add an ImageView on top of the TextView -->
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="139dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/pokeitemdle_logo" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp"
+        android:text="@string/welcome_message"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/classicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/classic_button" />
+
+    <Button
+        android:id="@+id/descriptionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descriptionButton" />
+
+</LinearLayout>
